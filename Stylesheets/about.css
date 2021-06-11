@@ -1,3 +1,7 @@
-@media screen and (max-width: 800px) {
+.wrenchgif {
+  text-align: center;
+}
 
+.wrenchgif img {
+  border-radius: 30px;
 }

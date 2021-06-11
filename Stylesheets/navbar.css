@@ -17,6 +17,12 @@
   width: 100%;
   z-index: 100;
   background: var(--black);
+  transition: 0.3s;
+}
+
+.header:hover {
+  padding-top: 8px;
+  padding-bottom: 8px;
 }
 
 .header a {
