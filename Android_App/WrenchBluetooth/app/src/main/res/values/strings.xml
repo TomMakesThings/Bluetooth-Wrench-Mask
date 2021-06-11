@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">Wrench</string>
+    <string name="title_activity_led_buttons">LedButtonsActivity</string>
+</resources>
