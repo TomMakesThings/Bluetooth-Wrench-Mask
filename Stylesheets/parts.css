@@ -1,0 +1,41 @@
+div.gallery img {
+  max-width: 500px;
+  width: 100%;
+  height: auto;
+  border-radius: 20px 0px;
+}
+
+div.part-desc {
+  padding: 10px;
+  margin-bottom: 15px;
+  text-align: center;
+  font-size: 10px;
+  background-color: white;
+  color: black;
+  border-radius: 20px 0px;
+}
+
+.responsive {
+  padding: 0 6px;
+  float: left;
+  width: 24.99999%;
+}
+
+@media only screen and (max-width: 700px) {
+  .responsive {
+    width: 49.99999%;
+    margin: 6px 0;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .responsive {
+    width: 100%;
+  }
+}
+
+.clearfix:after {
+  content: "";
+  display: table;
+  clear: both;
+}

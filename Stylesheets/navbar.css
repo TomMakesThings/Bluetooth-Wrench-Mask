@@ -1,0 +1,142 @@
+#profilepic {
+  max-width: 50px;
+  max-height: 50px;
+  float: left;
+	border-radius: 50%;
+}
+
+#username {
+  font-size: 25px;
+}
+
+.header {
+  font-family: hacked;
+  overflow: visible;
+  position: fixed;
+  top: 0px;
+  width: 100%;
+  z-index: 100;
+  background: var(--black);
+}
+
+.header a {
+  float: left;
+  color: white;
+  padding: 10px;
+  text-decoration: none;
+  line-height: 50px;
+  white-space: nowrap;
+}
+
+#header-left a {
+  font-size: 22px;
+}
+
+#header-center a {
+  font-size: 25px;
+}
+
+.type-dash {
+  animation: typing 1s linear infinite;
+}
+
+.navtext:hover {
+  animation: blinker 1.2s linear infinite;
+}
+
+@keyframes blinker {
+  50% {
+    opacity: 0.7;
+  }
+}
+
+@keyframes typing {
+  0% {
+    visibility: visible;
+  }
+  50% {
+    visibility: hidden;
+  }
+}
+
+#header-left {
+  float: left;
+  font-family: pineapple;
+}
+
+.header-right {
+  float: right;
+}
+
+.nav-dropdown {
+  display: inline;
+  float: left;
+  overflow: visible;
+}
+
+.nav-dropdown-content {
+  display: none;
+  position: absolute;
+  margin-top: 70px;
+  max-width: 120px;
+  border-radius: 0px 0px 15px 15px;
+  background-color: var(--light-grey);
+  word-wrap: break-word;
+}
+
+.nav-dropdown-content a {
+  white-space: normal;
+  font-size: 14px;
+  float: none;
+  color: black;
+  text-align: center;
+  display: inline-block;
+  text-align: left;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-top: -10px;
+  margin-bottom: -20px;
+  line-height: 1.4;
+}
+
+.nav-dropdown-content p {
+  float: left;
+}
+
+.nav-dropdown-content p:hover {
+  background: -webkit-linear-gradient(var(--darkerblue), var(--darkblue));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-decoration: underline;
+}
+
+.nav-dropdown:hover .nav-dropdown-content {
+  display: block;
+}
+
+@media screen and (max-width: 750px) {
+  #header-left, #header-center, .header-right {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+  }
+
+  #header-left a, #header-center a {
+    font-size: 26px;
+    font-size: min(5vw, 30px);
+  }
+
+  .header-right a {
+    font-size: 3vw;
+  }
+
+  .nav-dropdown-content a {
+    font-size: min(2.6vw, 14px);
+  }
+}
+
+@media screen and (min-width: 750px) and (max-width: 1110px) {
+  #header-center {
+    display: none;
+}

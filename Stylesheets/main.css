@@ -1,0 +1,118 @@
+:root {
+  --black: #000000;
+  --lightblack: #212121;
+}
+
+/** Custom fonts **/
+@font-face {
+  font-family: pineapple;
+  src: url('../Assets/Fonts/pineapple/PineappleDemo.ttf');
+}
+
+@font-face {
+  font-family: eightbit;
+  src: url('../Assets/Fonts/eight_bit/eight_bit.ttf');
+}
+
+@font-face {
+  font-family: pixel;
+  src: url('../Assets/Fonts/pixel/pixel.ttf');
+}
+
+@font-face {
+  font-family: hacked;
+  src: url('../Assets/Fonts/hacked/HACKED.ttf');
+}
+
+* {
+  box-sizing: border-box;
+  scroll-behavior: smooth !important;
+}
+
+body {
+  margin: auto;
+  font-family: pixel;
+  color: white;
+  background-color: var(--lightblack);
+}
+
+h1, h2, h3 {
+  font-family: eightbit;
+  text-align: center;
+}
+
+h1 {
+  font-size: 25px;
+}
+
+h2 {
+  font-size: 20px;
+}
+
+h3 {
+  font-size: 18px;
+}
+
+.content {
+  padding-left: 140px;
+  padding-right: 140px;
+  margin-top: 100px;
+  overflow: visible;
+}
+
+
+/** Reposition anchor tags above linked content **/
+a.anchor {
+  display: block;
+  position: relative;
+  top: -80px;
+  visibility: hidden;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 15px;
+}
+
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px grey;
+}
+
+::-webkit-scrollbar-thumb {
+  box-shadow: inset 0 0 5px grey;
+  background-image: linear-gradient(to top, var(--purple), var(--lighterpurple));
+}
+
+@media screen and (max-width: 720px) {
+  .content {
+    margin-top: 240px;
+  }
+}
+
+@media screen and (max-width: 1400px) and (min-width: 1300px) {
+  .content {
+    padding-left: 100px;
+    padding-right: 100px;
+  }
+}
+
+@media screen and (max-width: 1300px) and (min-width: 1200px) {
+  .content {
+    padding-left: 80px;
+    padding-right: 80px;
+  }
+}
+
+@media screen and (max-width: 1200px) and (min-width: 840px) {
+  .content {
+    padding-left: 60px;
+    padding-right: 60px;
+  }
+}
+
+@media screen and (max-width: 840px) {
+  .content {
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+}

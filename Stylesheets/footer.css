@@ -1,0 +1,14 @@
+.footer {
+  text-align: center;
+  font-family: pixel;
+  overflow: hidden;
+  padding: 5px;
+}
+
+.footer a {
+  color: white;
+  font-size: 10px;
+  padding: 5px;
+  text-decoration: none;
+  white-space: nowrap;
+}
