@@ -1,0 +1,15 @@
+.wiring {
+  text-align: center;
+  transition: transform 0.7s;
+}
+
+.wiring img {
+  border-radius: 30px;
+  width: 100%;
+  padding: 8px;
+  background-color: white;
+}
+
+.wiring:hover {
+  transform: scale(1.1);
+}

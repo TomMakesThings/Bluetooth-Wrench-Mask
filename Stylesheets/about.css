@@ -1,7 +1,9 @@
-.wrenchgif {
+.center-image {
   text-align: center;
 }
 
-.wrenchgif img {
+.center-image img {
   border-radius: 30px;
+  width: 100%;
+  max-width: 700px;
 }

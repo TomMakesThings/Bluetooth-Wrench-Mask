@@ -53,6 +53,14 @@ h3 {
   font-size: 18px;
 }
 
+video {
+  margin: 0 auto;
+  display: block;
+  width: 100%;
+  max-width: 700px;
+  border-radius: 30px;
+}
+
 .content {
   padding-left: 140px;
   padding-right: 140px;

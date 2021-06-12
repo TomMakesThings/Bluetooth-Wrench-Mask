@@ -11,6 +11,7 @@
 	<link rel="stylesheet" href="Stylesheets\navbar.css">
 	<link rel="stylesheet" href="Stylesheets\about.css">
 	<link rel="stylesheet" href="Stylesheets\parts.css">
+	<link rel="stylesheet" href="Stylesheets\steps.css">
 	<link rel="stylesheet" href="Stylesheets\footer.css">
 </head>
 
@@ -43,7 +44,7 @@
   	<h1>About</h1>
 		<p>Wrench is one of the main character from the game Watch Dogs 2 and I decided it would be a fun project to create a real version of his light up mask.
 		</p>
-		<p class="wrenchgif"><img src="Assets/Images/Wrench-Game.gif"></p>
+		<p class="center-image"><img src="Assets/Images/Wrench-Game.gif"></p>
 		<p>After some searching, I found a good tutorial on <a href="https://www.instructables.com/Phone-Controlled-Watch-Dogs-Wrench-Mask/">Instructables</a>.
 			However, I did not have access to a 3D printer, wanted the mask to be portable and felt there room for improvement with the code.
 			I therefore designed and coded my own version using the tutorial as inspiration.
@@ -51,12 +52,18 @@
 		<p>
 			This new version has 48 expressions controlled by an Android application.
 		</p>
+
+		<video controls>
+		  <source src="Assets/Videos/Phone-Demo.mov" type="video/mp4">
+		  Your browser does not support the video tag.
+		</video>
+
 	</div>
 
 	<br>
 
 	<div>
-		<a name="about" class="anchor"></a>
+		<a name="parts" class="anchor"></a>
 		<h1>Parts</h1>
 		<p>What you'll need:
 		</p>
@@ -83,8 +90,8 @@
 		</div>
 		<div class="column">
 			<div>
-				<a><img src="Assets/Images/Android-Phone.jpeg" class="part"></a>
-				<div class="part-desc">Android device</div>
+				<a><img src="Assets/Images/Android-Phone.jpg" class="part"></a>
+				<div class="part-desc">Android phone or tablet</div>
 			</div>
 			<div>
 				<a><img src="Assets/Images/Arduino-Uno.jpg" class="part"></a>
@@ -105,12 +112,16 @@
 				<div class="part-desc">HC-06 wireless bluetooth module</div>
 			</div>
 			<div>
+				<a><img src="Assets/Images/Jumper-Wires.jpg" class="part"></a>
+				<div class="part-desc">x14 male to female jumper wire, ideally 5 should be black</div>
+			</div>
+			<div>
 				<a><img src="Assets/Images/9V-Battery-Holder.jpg" class="part"></a>
 				<div class="part-desc">9V battery holder with connector lead</div>
 			</div>
 			<div>
-				<a><img src="Assets/Images/Jumper-Wires.jpg" class="part"></a>
-				<div class="part-desc">x14 male to female jumper wire, ideally 5 should be black</div>
+				<a><img src="Assets/Images/9V-Battery.jpg" class="part"></a>
+				<div class="part-desc">9V battery</div>
 			</div>
 			<div>
 				<a><img src="Assets/Images/Arduino-Case.jpg" class="part"></a>
@@ -133,8 +144,28 @@
 		</div>
 	</div>
 
-
 	<br>
+
+	<div>
+		<a name="parts" class="anchor"></a>
+		<h1>Steps</h1>
+		<h2>Step 1 - Painting</h2>
+		<p>Paint the mask</p>
+		<p class="center-image"><img src="Assets/Images/Masks-Painted.jpeg"></p>
+		</p>
+	</div>
+
+	<div>
+		<a name="parts" class="anchor"></a>
+		<h2>Step 2 - Arduino</h2>
+		<p>1. Download <a href="https://www.arduino.cc/en/software">Arduino IDE</a></p>
+		<p>2. Plug the USB cable into the arduino and connect to a computer</p>
+		<p class="center-image"><img src="Assets/Images/USB-Connected-Arduino.png"></p>
+
+		<p>Wire the LED matricies and bluetooth module to the arduino uno as follows:</p>
+		<p class="wiring" id="arduino-wiring"><img src="Assets/Images/Arduino-Wiring.png"></p>
+		</p>
+	</div>
 
 </div>
 
