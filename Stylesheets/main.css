@@ -24,6 +24,11 @@
   src: url('../Assets/Fonts/hacked/HACKED.ttf');
 }
 
+@font-face {
+  font-family: highpixel;
+  src: url('../Assets/Fonts/high-pixel-7/high_pixel-7.ttf');
+}
+
 * {
   box-sizing: border-box;
   scroll-behavior: smooth !important;
@@ -31,21 +36,20 @@
 
 body {
   margin: auto;
-  font-family: pixel;
+  font-family: highpixel;
+  font-size: 18px;
   color: white;
   background-color: var(--lightblack);
 }
 
-h1, h2, h3 {
+h1 {
   font-family: eightbit;
+  font-size: 25px;
   text-align: center;
 }
 
-h1 {
-  font-size: 25px;
-}
-
 h2 {
+  font-family: pixel;
   font-size: 20px;
 }
 
@@ -59,6 +63,11 @@ video {
   width: 100%;
   max-width: 700px;
   border-radius: 30px;
+}
+
+li {
+  /* Custom bullet points */
+  list-style-image: url("../Assets/Images/Eyeball.png");
 }
 
 .content {
