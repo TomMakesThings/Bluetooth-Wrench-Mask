@@ -45,7 +45,7 @@
 		<p>Wrench is one of the main character from the game Watch Dogs 2 and I thought it would be a fun project to create a real version of his light up mask.
 		</p>
 		<p class="center-image"><img src="Assets/Images/Wrench-Game.gif"></p>
-		<p>Although there are already some great tutorials out there, I felt there was room for improvement and so built and coded my own mask using previous builds as an inspiration.
+		<p>Although there are already some great tutorials out there, there's always room for improvement and so I built and coded my own mask using previous work for inspiration.
 			The build took a year, but it turned out really well and so here I am documenting the results in a tutorial of my own!
 		</p>
 		<p>
@@ -55,7 +55,9 @@
 			<li>Is controlled wirelessly over bluetooth by a custom built Dedsec themed Android application</li>
 			<li>Has 48 different set expressions with blinking and transition animations</li>
 			<li>Also allows you to draw custom expressions, display messages and adjust speed and brightness</li>
+			<li>Is portable and runs on a single easy to replace 9V battery</li>
 			<li>Looks more like the in-game character than most other tutorials</li>
+			<li>Comes with this hacker themed site :)</li>
 		</ul>
 
 		<div class="video-container">
@@ -136,6 +138,10 @@
 		</div>
 		<div class="column">
 			<div>
+				<a><img src="Assets/Images/Black-Elastic.png" class="part"></a>
+				<div class="part-desc">Black elastic strap</div>
+			</div>
+			<div>
 				<a><img src="Assets/Images/Velcro.jpg" class="part"></a>
 				<div class="part-desc">Velcro strip</div>
 			</div>
@@ -147,7 +153,15 @@
 				<a><img src="Assets/Images/Liquid-Nails.jpg" class="part"></a>
 				<div class="part-desc">Liquid nails</div>
 			</div>
+			<div>
+				<a><img src="Assets/Images/Black-Paint.png" class="part"></a>
+				<div class="part-desc">Black paint</div>
+			</div>
 		</div>
+
+		<p>...well that's what I used, but you don't have to use the exact same
+		</p>
+
 	</div>
 
 	<br>
@@ -155,10 +169,10 @@
 	<div>
 		<a name="parts" class="anchor"></a>
 		<h1>Steps</h1>
-		<h2>Step 1 - Preparing the mask</h2>
-		<p>To start, I bought a cheap Wrench mask from eBay.
-			The shape is a good immitation of the in-game mask, but the paint job was awful.
-			I therefore spray painted the whole thing black, painted the spikes and bit at the top silver and then coated it in a clear gloss to make it more durable.
+		<h2>Step 1 - Painting the mask</h2>
+		<p>The mask I got is a cheap Wrench mask from eBay.
+			Its a pretty good immitation of the in-game mask... athough the paint job is awful.
+			Therefore I spray painted the whole thing black, painted the spikes and bit at the top silver and added a clear gloss coating to make it more durable.
 		</p>
 			<p class="center-image"><img src="Assets/Images/Masks-Painted.jpeg"></p>
 	</div>
@@ -166,8 +180,17 @@
 	<div>
 		<a name="parts" class="anchor"></a>
 		<h2>Step 2 - Arduino</h2>
-		<p>The LED matrix eyes are controlled by an Arduino UNO.
+		<h3>Technical Explaination</h3>
+		<p>The pre-set LED matrix eyes are stored as binary arrays on the Arduino UNO's memory.
+			Each array is linked to a key value that represents the expression.
+			By default, the Arduino will display the X_X eyes when switched on as this has been set as key1.
 		</p>
+		<p>
+			The Arduino can be paired to a device such as a phone through its bluetooth receiver.
+			This enables you to send commands to the Ardiuno
+			will change the values to display whenever it receives.
+		</p>
+		<h3>Instructions</h3>
 		<ol>
 			<li>Download <a href="https://www.arduino.cc/en/software">Arduino IDE</a></li>
 			<li>Plug the USB cable into the arduino and connect to a computer</li>
