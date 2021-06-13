@@ -27,8 +27,9 @@
 	</div>
 	<div class="header-right">
 		<a href="#about" class="navtext">About</a>
+		<a href="#parts" class="navtext">Parts</a>
 		<div class="nav-dropdown">
-			<a href="#datasets" class="navtext">Data</a>
+			<a href="#steps" class="navtext">Steps</a>
 			<div class="nav-dropdown-content">
 				<p><a href="#benchmark">None</a></p>
 				<p><a href="#simulated">None</a></p>
@@ -103,7 +104,7 @@
 			</div>
 			<div>
 				<a><img src="Assets/Images/Arduino-Uno.jpg" class="part"></a>
-				<div class="part-desc">Arduino UNO</div>
+				<div class="part-desc">Genuiune Arduino UNO, or an unofficial clone board</div>
 			</div>
 			<div>
 				<a><img src="Assets/Images/USB-Cable.jpg" class="part"></a>
@@ -167,26 +168,32 @@
 	<br>
 
 	<div>
-		<a name="parts" class="anchor"></a>
+		<a name="steps" class="anchor"></a>
 		<h1>Steps</h1>
 		<h2>Step 1 - Painting the mask</h2>
 		<p>The mask I got is a cheap Wrench mask from eBay.
-			Its a pretty good immitation of the in-game mask... athough the paint job is awful.
-			Therefore I spray painted the whole thing black, painted the spikes and bit at the top silver and added a clear gloss coating to make it more durable.
+			Its a pretty good immitation of the in-game one... athough the paint job was awful.
+			To fix this I spray painted the whole thing black, painted the spikes and bit at the top silver and added a clear gloss coating to make it more durable.
 		</p>
 			<p class="center-image"><img src="Assets/Images/Masks-Painted.jpeg"></p>
 	</div>
 
 	<div>
 		<a name="parts" class="anchor"></a>
-		<h2>Step 2 - Arduino</h2>
-		<h3>Technical Explaination</h3>
-		<p>The pre-set LED matrix eyes are stored as binary arrays on the Arduino UNO's memory.
+		<h2>Step 2 - Arduino Wiring</h2>
+		<p>The Arduino acts as both a receiver and a controller, as it responds to commands from the app and then interprets them to set the LED matrix eyes.
+		</p>
+		<p>Wire the LED matricies and bluetooth module to the arduino uno as follows:</p>
+		<p class="wiring" id="arduino-wiring"><img src="Assets/Images/Arduino-Wiring.png"></p>
+		</p>
+		<h2>Step 3 - Arduino Code</h2>
+		<h3>Technical Explaination of Code</h3>
+		<p>The pre-set LED matrix eyes are stored as binary arrays on the Arduino's memory.
 			Each array is linked to a key value that represents the expression.
 			By default, the Arduino will display the X_X eyes when switched on as this has been set as key1.
 		</p>
 		<p>
-			The Arduino can be paired to a device such as a phone through its bluetooth receiver.
+			The Arduino can be paired to a device such as a phone through a bluetooth receiver.
 			This enables you to send commands to the Ardiuno
 			will change the values to display whenever it receives.
 		</p>
@@ -196,9 +203,6 @@
 			<li>Plug the USB cable into the arduino and connect to a computer</li>
 			<p class="center-image"><img src="Assets/Images/USB-Connected-Arduino.png"></p>
 
-		<p>Wire the LED matricies and bluetooth module to the arduino uno as follows:</p>
-		<p class="wiring" id="arduino-wiring"><img src="Assets/Images/Arduino-Wiring.png"></p>
-		</p>
 	</div>
 
 </div>
