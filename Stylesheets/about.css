@@ -21,6 +21,13 @@
   text-align: center;
 }
 
+.video-buttons-small-screen {
+  margin: auto;
+  text-align: center;
+  display: inline-block;
+  width: 100%;
+}
+
 .circle-button {
   min-width: 70px;
   max-width: 70px;
@@ -30,12 +37,21 @@
   border: none;
   border-radius: 50%;
   text-decoration: none;
-  display: inline-block;
   text-align: center;
   font-size: 30px;
   font-family: highpixel;
   font-weight: bold;
   cursor: pointer;
+}
+
+.wide-screen-button {
+  display: none;
+  margin-left: 10px;
+}
+
+.small-screen-button {
+  margin: 20px 10px 10px 10px;
+  display: inline-block;
 }
 
 .circle-button p {
@@ -57,4 +73,14 @@
 .left {
   transform: rotate(135deg);
   -webkit-transform: rotate(135deg);
+}
+
+@media screen and (min-width: 880px) {
+  .wide-screen-button {
+    display: inline-block;
+  }
+
+  .small-screen-button {
+    display: none;
+  }
 }

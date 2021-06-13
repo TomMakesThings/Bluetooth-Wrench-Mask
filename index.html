@@ -63,10 +63,16 @@
 		</ul>
 
 		<div class="video-container">
-			<video controls>
-		  	<source src="Assets/Videos/Phone-Demo.mov" type="video/mp4">
-		  	Error! Could not play video as it is not supported by your browser.
+			<button class="circle-button wide-screen-button previous-button" style="float: left;" onclick="aboutVideoChanger(this)"><p><</p></button>
+			<video controls id="about-video">
+		  	<source src="Assets/Videos/App-Connection.mov" type="video/mp4">
+				Error! Could not play video as it is not supported by your browser.
 			</video>
+			<button class="circle-button wide-screen-button next-button" style="float: right;" onclick="aboutVideoChanger(this)"><p>></p></button>
+		</div>
+		<div class="video-buttons-small-screen">
+			<button class="circle-button small-screen-button next-button" onclick="aboutVideoChanger(this)"><p><</p></button>
+			<button class="circle-button small-screen-button previous-button" onclick="aboutVideoChanger(this)"><p>></p></button>
 		</div>
 
 	</div>
@@ -181,10 +187,12 @@
 
 	<div>
 		<a name="parts" class="anchor"></a>
-		<h2>Step 2 - Arduino Wiring</h2>
-		<p>The Arduino acts as both a receiver and a controller, as it responds to commands from the app and then interprets them to set the LED matrix eyes.
+		<h2>Step 2 - Arduino</h2>
+		<p>The Arduino acts as both a receiver and a controller.
+			When it is sent commands from the app via the bluetooth module, the board interprets these to set the lights of the LED matricies.
 		</p>
-		<p>Wire the LED matricies and bluetooth module to the arduino uno as follows:</p>
+		<h3>Wiring</h3>
+		<p>The first step to setting up the Arduino is to wire the LED matricies and bluetooth module as follows:</p>
 		<p class="wiring" id="arduino-wiring"><img src="Assets/Images/Arduino-Wiring.png"></p>
 		</p>
 		<h2>Step 3 - Arduino Code</h2>
@@ -208,12 +216,16 @@
 		<h1>Results</h1>
 
 		<div class="video-container">
-			<button class="circle-button" style="float: left; margin-right: 10px;"><p><</p></button>
-			<video controls>
+			<button class="circle-button wide-screen-button previous-button" style="float: left;" onclick="resultsVideoChanger(this)"><p><</p></button>
+			<video controls id="results-video">
 			  <source src="Assets/Videos/Wrench-Outfit-Pose.mp4" type="video/mp4">
 			  Error! Could not play video as it is not supported by your browser.
 			</video>
-			<button class="circle-button" style="float: right; margin-left: 10px;"><p>></p></button>
+			<button class="circle-button wide-screen-button next-button" style="float: right;" onclick="resultsVideoChanger(this)"><p>></p></button>
+		</div>
+		<div class="video-buttons-small-screen">
+			<button class="circle-button small-screen-button next-button" onclick="resultsVideoChanger(this)"><p><</p></button>
+			<button class="circle-button small-screen-button previous-button" onclick="resultsVideoChanger(this)"><p>></p></button>
 		</div>
 
 
@@ -230,6 +242,7 @@
 </div>
 
 <script src="Javascript/navbar.js"></script>
+<script src="Javascript/video.js"></script>
 
 </body>
 </html>
