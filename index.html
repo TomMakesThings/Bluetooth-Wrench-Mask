@@ -111,7 +111,7 @@
 			</div>
 			<div>
 				<a><img src="Assets/Images/Arduino-Uno.jpg" class="part"></a>
-				<div class="part-desc">Genuiune Arduino UNO, or an unofficial clone board</div>
+				<div class="part-desc">Arduino UNO, can genuiune or an unofficial clone board</div>
 			</div>
 			<div>
 				<a><img src="Assets/Images/USB-Cable.jpg" class="part"></a>
@@ -125,7 +125,7 @@
 		<div class="column">
 			<div>
 				<a><img src="Assets/Images/Bluetooth-Module.jpg" class="part"></a>
-				<div class="part-desc">HC-06 wireless bluetooth module</div>
+				<div class="part-desc">HC-06 wireless bluetooth module, HC-05 works too</div>
 			</div>
 			<div>
 				<a><img src="Assets/Images/Jumper-Wires.jpg" class="part"></a>
@@ -133,7 +133,7 @@
 			</div>
 			<div>
 				<a><img src="Assets/Images/9V-Battery-Holder.png" class="part"></a>
-				<div class="part-desc">9V battery holder with connector lead</div>
+				<div class="part-desc">9V battery holder with connector lead and on/off switch</div>
 			</div>
 			<div>
 				<a><img src="Assets/Images/9V-Battery.jpg" class="part"></a>
@@ -167,7 +167,7 @@
 			</div>
 		</div>
 
-		<p>...well that's what I used, but you don't have to use the exact same
+		<p>...well that's what I used, but feel free to make modifications
 		</p>
 
 	</div>
@@ -178,8 +178,8 @@
 		<a name="steps" class="anchor"></a>
 		<h1>Steps</h1>
 		<h2>Step 1 - Painting the mask</h2>
-		<p>The mask I got is a cheap Wrench mask from eBay.
-			Its a pretty good immitation of the in-game one... athough the paint job was awful.
+		<p>The mask I got is a cheap "Watch Dogs" mask from Amazon.
+			Its a pretty good immitation of the in-game one... athough the paint job for these are awful.
 			To fix this I spray painted the whole thing black, painted the spikes and bit at the top silver and added a clear gloss coating to make it more durable.
 		</p>
 			<p class="center-image"><img src="Assets/Images/Masks-Painted.jpeg"></p>
@@ -187,30 +187,84 @@
 
 	<div>
 		<a name="parts" class="anchor"></a>
-		<h2>Step 2 - Arduino</h2>
+		<h2>Step 2 - Arduino Wiring</h2>
 		<p>The Arduino acts as both a receiver and a controller.
 			When it is sent commands from the app via the bluetooth module, the board interprets these to set the lights of the LED matricies.
 		</p>
 		<h3>Wiring</h3>
-		<p>The first step to setting up the Arduino is to wire the LED matricies and bluetooth module as follows:</p>
+		<p>The first step to setting up the Arduino is to wire the LED matricies and bluetooth module as follows.
+		The wire colours don't have to match, though I recommend using black wires between the LED matrices as they may be partially visible between the eyes.</p>
 		<p class="wiring" id="arduino-wiring"><img src="Assets/Images/Arduino-Wiring.png"></p>
 		</p>
-		<h2>Step 3 - Arduino Code</h2>
+		<h2>Step 3 - Uploading Arduino Code</h2>
+		<p>Code can be uploaded to the board using Arduino IDE.
+			If you do not have this already, <a href="https://www.arduino.cc/en/software" target="_blank" rel="noopener noreferrer">download the latest version</a> from the official Arduino site.
+			For this tutorial I'm using version 1.8.15.
+			To download all required code in zip format, click the file below.
+			You can also find these files on <a href="https://github.com/TomMakesThings/Bluetooth-Wrench-Mask" target="_blank" rel="noopener noreferrer">GitHub</a>.
+		</p>
+
+		<a href="https://github.com/TomMakesThings/Bluetooth-Wrench-Mask/archive/refs/heads/main.zip" target="_blank" rel="noopener noreferrer" download>
+			<img src="Assets/Images/Code-File.png" class="code-download">
+		</a>
+
+		<p>Extract the contents of the zip, locate the file under Bluetooth-Wrench-Mask-main ➔ Arduino ➔ BluetoothEyes.ino and click it to open the sketch in Arduino IDE.
+			If this is your first time using the IDE, make sure to set the board type by going to Tools ➔ Board and selecting "Arduino Uno".</p>
+		<p class="code-image"><img src="Assets/Images/Board-Selection.png"></p>
+
+		<p>Now the sketch is ready to upload so plug the USB cable into the Arduino to connect it to the computer.</p>
+		<p class="center-image"><img src="Assets/Images/USB-Connected-Arduino.png"></p>
+
+		<p>Then upload the code to the board from Sketch ➔ Upload, or pressing Ctrl+U if using Windows or Cmd+U for Mac.</p>
+		<p class="code-image"><img src="Assets/Images/Board-Upload.png"></p>
+
+		<p>If it has worked correctly, the two LED matricies should light up and display X on each.</p>
+
 		<h3>Technical Explaination of Code</h3>
-		<p>The pre-set LED matrix eyes are stored as binary arrays on the Arduino's memory.
-			Each array is linked to a key value that represents the expression.
-			By default, the Arduino will display the X_X eyes when switched on as this has been set as key1.
+		<p>The pre-set LED matrix eyes and alphabet are stored as binary arrays on the Arduino's memory.
+			Each array is linked to a key value that represents the expression it is linked to.
+			By default, the Arduino displays the X eyes when switched on as this has been set as "key1", though this can be changed at the top of the code.
+		</p>
+		<p>Some expressions consist of multiple frames, such as a wink, while others consist of just one with a blinking animation in-between.
+			The Arduino continuously monitors for a bluetooth signal to change the expression, though while no signal is received, the current expression will run on a loop.
+		</p>
+
+		<h2>Step 3 - Android App</h2>
+		<p>
+			The Arduino can be paired to an Android device such as a phone or tablet through the bluetooth receiver.
+			This grants permission to send commands to the Ardiuno to change the values to display.
+			Before pairing, make sure the Arduino is switched and that the bluetooth module is wired correctly.
 		</p>
 		<p>
-			The Arduino can be paired to a device such as a phone through a bluetooth receiver.
-			This enables you to send commands to the Ardiuno
-			will change the values to display whenever it receives.
+			How to pair to the Arduino will depend on what device you have, but in general this should be under Settings ➔ Bluetooth.
+			If the name of the bluetooth module has not been changed, it will appear under its default name such as "HC-05".
 		</p>
-		<h3>Instructions</h3>
-		<ol>
-			<li>Download <a href="https://www.arduino.cc/en/software">Arduino IDE</a></li>
-			<li>Plug the USB cable into the arduino and connect to a computer</li>
-			<p class="center-image"><img src="Assets/Images/USB-Connected-Arduino.png"></p>
+		<p>To download the application, visit this site on the device and click the phone icon below.
+			Note you may also have to go to Setting ➔ Security and check the option "Unknown sources" for this to work.
+		</p>
+
+		<a href="https://github.com/TomMakesThings/Bluetooth-Wrench-Mask/raw/main/Android_App/bluetooth-controller-app.apk" target="_blank" rel="noopener noreferrer" download>
+			<img src="Assets/Images/Dedsec-Phone.png" class="code-download" style="height: 150px;">
+		</a>
+
+		<p>Once the app is install, open it and you should see a list of all paired devices.
+			Press on the one corresponding to the name of the bluetooth module and wait for the devices to connect.
+			Now you should be able to change the LEDs to different expression by clicking buttons on the screen.
+		</p>
+
+		<div class="video-container">
+			<video controls>
+				<source src="Assets/Videos/Phone-Demo.mov" type="video/mp4">
+				Error! Could not play video as it is not supported by your browser.
+			</video>
+		</div>
+
+		<h2>Step 4 - Attaching the Electronics</h2>
+
+		<p>Once you have tested that the code and electronics are working, the mask can be assembled.</p>
+		<p>Unfortunately the Arduino has to be unwired and wired again.</p>
+
+		<br>
 
 		<a name="results" class="anchor"></a>
 		<h1>Results</h1>

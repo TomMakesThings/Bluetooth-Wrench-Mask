@@ -13,3 +13,28 @@
 .wiring:hover {
   transform: scale(1.03);
 }
+
+.code-download {
+  text-align: center;
+  height: 120px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.code-download:hover {
+  animation-duration: 1.2s;
+  animation-name: rotation;
+  animation-iteration-count: infinite;
+  animation-direction: normal;
+}
+
+@keyframes rotation {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
