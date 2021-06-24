@@ -19,7 +19,7 @@
 
 <div class="header">
 	<div id="header-left" onmouseover="profileHover(this);" onmouseout="profileUnhover(this);">
-		<a href="https://github.com/TomMakesThings"><img src="Assets/Images/Profile.gif" alt="GitHub profile picture" id="profilepic"></a>
+		<a href="https://github.com/TomMakesThings"><img src="Assets/Images/Profile.png" alt="GitHub profile picture" id="profilepic"></a>
 		<a href="https://tommakesthings.github.io/" id="username" class="navtext">TomMakesThings</a>
 	</div>
 	<div id="header-center">
@@ -31,9 +31,11 @@
 		<div class="nav-dropdown">
 			<a href="#steps" class="navtext">Steps</a>
 			<div class="nav-dropdown-content">
-				<p><a href="#benchmark">None</a></p>
-				<p><a href="#simulated">None</a></p>
-				<p><a href="#mousecortex">None</a></p>
+				<p><a class="nav-dropdown-anchor" href="#steps">1. Painting the Mask</a></p>
+				<p><a class="nav-dropdown-anchor" href="#step2">2. Arduino Wiring</a></p>
+				<p><a class="nav-dropdown-anchor" href="#step3">3. Arduino Code</a></p>
+				<p><a class="nav-dropdown-anchor" href="#step4">4. Android App</a></p>
+				<p><a class="nav-dropdown-anchor" href="#step5">5. Attaching Electronics</a></p>
 			</div>
 		</div>
 		<a href="#results" class="navtext">Results</a>
@@ -57,9 +59,8 @@
 			<li>Is controlled wirelessly over bluetooth by a custom built Dedsec themed Android application</li>
 			<li>Has 48 different set expressions with blinking and transition animations</li>
 			<li>Also allows you to draw custom expressions, display messages and adjust speed and brightness</li>
-			<li>Is portable and runs on a single easy to replace 9V battery</li>
+			<li>Is portable and runs on a single, easily replaceable 9V battery</li>
 			<li>Looks more like the in-game character than most other tutorials</li>
-			<li>Comes with this hacker themed site :)</li>
 		</ul>
 
 		<div class="video-container">
@@ -186,7 +187,7 @@
 	</div>
 
 	<div>
-		<a name="parts" class="anchor"></a>
+		<a name="step2" class="anchor"></a>
 		<h2>Step 2 - Arduino Wiring</h2>
 		<p>The Arduino acts as both a receiver and a controller.
 			When it is sent commands from the app via the bluetooth module, the board interprets these to set the lights of the LED matricies.
@@ -196,6 +197,8 @@
 		The wire colours don't have to match, though I recommend using black wires between the LED matrices as they may be partially visible between the eyes.</p>
 		<p class="wiring" id="arduino-wiring"><img src="Assets/Images/Arduino-Wiring.png"></p>
 		</p>
+
+		<a name="step3" class="anchor"></a>
 		<h2>Step 3 - Uploading Arduino Code</h2>
 		<p>Code can be uploaded to the board using Arduino IDE.
 			If you do not have this already, <a href="https://www.arduino.cc/en/software" target="_blank" rel="noopener noreferrer">download the latest version</a> from the official Arduino site.
@@ -229,7 +232,8 @@
 			The Arduino continuously monitors for a bluetooth signal to change the expression, though while no signal is received, the current expression will run on a loop.
 		</p>
 
-		<h2>Step 3 - Android App</h2>
+		<a name="step4" class="anchor"></a>
+		<h2>Step 4 - Android App</h2>
 		<p>
 			The Arduino can be paired to an Android device such as a phone or tablet through the bluetooth receiver.
 			This grants permission to send commands to the Ardiuno to change the values to display.
@@ -247,7 +251,7 @@
 			<img src="Assets/Images/Dedsec-Phone.png" class="code-download" style="height: 150px;">
 		</a>
 
-		<p>Once the app is install, open it and you should see a list of all paired devices.
+		<p>Once the app is installed, open it and you should see a list of all paired devices.
 			Press on the one corresponding to the name of the bluetooth module and wait for the devices to connect.
 			Now you should be able to change the LEDs to different expression by clicking buttons on the screen.
 		</p>
@@ -259,10 +263,14 @@
 			</video>
 		</div>
 
-		<h2>Step 4 - Attaching the Electronics</h2>
+		<a name="step5" class="anchor"></a>
+		<h2>Step 5 - Attaching the Electronics</h2>
 
-		<p>Once you have tested that the code and electronics are working, the mask can be assembled.</p>
-		<p>Unfortunately the Arduino has to be unwired and wired again.</p>
+		<p>Now that you have tested that the code and electronics are working, the mask can be assembled.</p>
+		<p>To protect the Arduino and keep the electronics away from your face, the Arduino is housed in a plastic case.
+			This can be attached in place below the LEDs using the liquid nails.
+		</p>
+		<p>Unfortunately this means that you will have to remove the wires and wire it again in the same way to fit it into the case.</p>
 
 		<br>
 

@@ -1,9 +1,9 @@
 function profileHover(element) {
-  document.getElementById("profilepic").setAttribute('src', 'Assets/Images/Profile.gif');
+  document.getElementById("profilepic").setAttribute('src', 'Assets/Images/Profile-Glitch.gif');
 }
 
 function profileUnhover(element) {
-  document.getElementById("profilepic").setAttribute('src', 'Assets/Images/Profile-Glitch.gif');
+  document.getElementById("profilepic").setAttribute('src', 'Assets/Images/Profile.png');
 }
 
 window.onscroll = function() {scrollFunction()};
