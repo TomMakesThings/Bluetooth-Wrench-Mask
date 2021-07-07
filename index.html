@@ -31,7 +31,7 @@
 		<div class="nav-dropdown">
 			<a href="#steps" class="navtext">Steps</a>
 			<div class="nav-dropdown-content">
-				<p><a class="nav-dropdown-anchor" href="#steps">1. Painting the Mask</a></p>
+				<p><a class="nav-dropdown-anchor" href="#steps">1. Mask Preparation</a></p>
 				<p><a class="nav-dropdown-anchor" href="#step2">2. Arduino Wiring</a></p>
 				<p><a class="nav-dropdown-anchor" href="#step3">3. Arduino Code</a></p>
 				<p><a class="nav-dropdown-anchor" href="#step4">4. Android App</a></p>
@@ -178,99 +178,155 @@
 	<div>
 		<a name="steps" class="anchor"></a>
 		<h1>Steps</h1>
-		<h2>Step 1 - Painting the mask</h2>
-		<p>The mask I got is a cheap "Watch Dogs" mask from Amazon.
-			Its a pretty good immitation of the in-game one... athough the paint job for these are awful.
-			To fix this I spray painted the whole thing black, painted the spikes and bit at the top silver and added a clear gloss coating to make it more durable.
-		</p>
+		<details open="open">
+			<summary class="header2">Step 1 - Mask Preparation</summary>
+			<p>The mask I used is a cheap "Watch Dogs" mask that you can find on Amazon or eBay.
+				These are a pretty good immitation of the in-game one... but being cheap they're not perfect.
+				If you're mask arrives bent, then its easy to reshape it by dunking the bent part of it into a bowl of boiling water.
+			</p>
+			<p>The paint job for the mask was awful so to fix this I spray painted the whole thing black, painted the spikes and bit at the top silver and added a clear gloss coating.
+		 		To reduce the chance of the paint chipping, make sure you're using paint suitable for plastic.
+			</p>
 			<p class="center-image"><img src="Assets/Images/Masks-Painted.jpeg"></p>
+		</details>
 	</div>
+
+	<br>
 
 	<div>
 		<a name="step2" class="anchor"></a>
-		<h2>Step 2 - Arduino Wiring</h2>
-		<p>The Arduino acts as both a receiver and a controller.
-			When it is sent commands from the app via the bluetooth module, the board interprets these to set the lights of the LED matricies.
-		</p>
-		<h3>Wiring</h3>
-		<p>The first step to setting up the Arduino is to wire the LED matricies and bluetooth module as follows.
-		The wire colours don't have to match, though I recommend using black wires between the LED matrices as they may be partially visible between the eyes.</p>
-		<p class="wiring" id="arduino-wiring"><img src="Assets/Images/Arduino-Wiring.png"></p>
-		</p>
+		<details open="open">
+			<summary class="header2">Step 2 - Arduino Wiring</summary>
+			<p>The Arduino acts as both a receiver and a controller.
+				When it is sent commands from the app via the bluetooth module, the board interprets these to set the lights of the LED matricies.
+			</p>
+			<h3>Wiring</h3>
+			<p>The first step to setting up the Arduino is to wire the LED matricies as follows.
+			The wire colours don't have to match, though I recommend using black wires between the LED matrices as they may be partially visible between the eyes.
+			For now do not connect the bluetooth module.
+			</p>
+			<p class="wiring"><img src="Assets/Images/Arduino-LED-Wiring.png"></p>
+		</details>
+
+		<p>and bluetooth module  I had a bluetooth module connected to the RX/TX pins.</p>
+		<p class="wiring"><img src="Assets/Images/Arduino-Wiring.png"></p>
+
+		<br>
 
 		<a name="step3" class="anchor"></a>
-		<h2>Step 3 - Uploading Arduino Code</h2>
-		<p>Code can be uploaded to the board using Arduino IDE.
-			If you do not have this already, <a href="https://www.arduino.cc/en/software" target="_blank" rel="noopener noreferrer">download the latest version</a> from the official Arduino site.
-			For this tutorial I'm using version 1.8.15.
-			To download all required code in zip format, click the file below.
-			You can also find these files on <a href="https://github.com/TomMakesThings/Bluetooth-Wrench-Mask" target="_blank" rel="noopener noreferrer">GitHub</a>.
-		</p>
+		<details open="open">
+			<summary class="header2">Step 3 - Uploading Arduino Code</summary>
+			<p>Code can be uploaded to the board using Arduino IDE.
+				If you do not have this already, <a href="https://www.arduino.cc/en/software" target="_blank" rel="noopener noreferrer">download the latest version</a> from the official Arduino site.
+				For this tutorial I'm using version 1.8.15.
+				To download all required code in zip format, click the file below.
+				You can also find these files on <a href="https://github.com/TomMakesThings/Bluetooth-Wrench-Mask" target="_blank" rel="noopener noreferrer">GitHub</a>.
+			</p>
 
-		<a href="https://github.com/TomMakesThings/Bluetooth-Wrench-Mask/archive/refs/heads/main.zip" target="_blank" rel="noopener noreferrer" download>
-			<img src="Assets/Images/Code-File.png" class="code-download">
-		</a>
+			<a href="https://github.com/TomMakesThings/Bluetooth-Wrench-Mask/archive/refs/heads/main.zip" target="_blank" rel="noopener noreferrer" download>
+				<img src="Assets/Images/Code-File.png" class="code-download">
+			</a>
 
-		<p>Extract the contents of the zip, locate the file under Bluetooth-Wrench-Mask-main ➔ Arduino ➔ BluetoothEyes.ino and click it to open the sketch in Arduino IDE.
-			If this is your first time using the IDE, make sure to set the board type by going to Tools ➔ Board and selecting "Arduino Uno".</p>
-		<p class="code-image"><img src="Assets/Images/Board-Selection.png"></p>
+			<p>Extract the contents of the zip, locate the file under Bluetooth-Wrench-Mask-main ➔ Arduino ➔ BluetoothEyes.ino and click it to open the sketch in Arduino IDE.
+				If this is your first time using the IDE, make sure to set the board type by going to Tools ➔ Board and selecting "Arduino Uno".</p>
+			<p class="code-image"><img src="Assets/Images/Board-Selection.png"></p>
 
-		<p>Now the sketch is ready to upload so plug the USB cable into the Arduino to connect it to the computer.</p>
-		<p class="center-image"><img src="Assets/Images/USB-Connected-Arduino.png"></p>
+			<p>Now plug the USB cable into the Arduino to connect it to the computer.</p>
+			<p class="center-image"><img src="Assets/Images/USB-Connected-Arduino.png"></p>
 
-		<p>Then upload the code to the board from Sketch ➔ Upload, or pressing Ctrl+U if using Windows or Cmd+U for Mac.</p>
-		<p class="code-image"><img src="Assets/Images/Board-Upload.png"></p>
+			<p>Again if this is your first time using Arduino, You must also set the port of the board from Tools ➔ Port.</p>
+			<details>
+	    	<summary class="hint">Help the Port option is greyed out!</summary>
+				<p>If this happens you first need to install the correct serial port driver for the device to be recognised.
+					Which driver to install depends on the type of board you have:</p>
+				<ul>
+					<li>If you're using an official Arduino, you can configure the board to use the drivers pre-installed with Arduino IDE as shown in <a href="https://www.arduino.cc/en/Guide/DriverInstallation">this driver installation guide</a>.</li>
+					<li>If you're a cheapskate like myself and you're using a clone board (an unofficial Arduino), you must instead install the driver from the board's manufacturer.
+						Many clone boards commonly come with a CH340 chip, though if you're unsure you can check the inscription on the chip closest to the USB port as shown in the image below.
+				 	  If this is the case then it can be installed via this <a href="https://electropeak.com/learn/how-to-install-ch340-driver/">tutorial</a>.</li>
+				</ul>
+				<p class="center-image"><img src="Assets/Images/Board-Chip.png" style="max-width: 600px;"></p>
+			</details>
+			<p class="code-image"><img src="Assets/Images/Port-Select.png"></p>
 
-		<p>If it has worked correctly, the two LED matricies should light up and display X on each.</p>
+			<p>Check that the sketch compiles from Sketch ➔ Verify / Compile.</p>
+			<p class="code-image"><img src="Assets/Images/Sketch-Verify.png"></p>
+			<p>This will raise an error if you're missing the LedControl library.
+				If this is the case, install the library and try compile the sketch again.
+			</p>
+			<details>
+				<summary class="hint">How do I install the LedControl library?</summary>
+				<p>To install it, select Sketch ➔ Include Library ➔ Manage Libraries, then search for "LedControl" and press "Install".</p>
+				<p class="code-image"><img src="Assets/Images/Include-Library.png"></p>
+				<p class="code-image"><img src="Assets/Images/Library-Select.png" style="max-width: 800px;"></p>
+			</details>
 
-		<h3>Technical Explaination of Code</h3>
-		<p>The pre-set LED matrix eyes and alphabet are stored as binary arrays on the Arduino's memory.
-			Each array is linked to a key value that represents the expression it is linked to.
-			By default, the Arduino displays the X eyes when switched on as this has been set as "key1", though this can be changed at the top of the code.
-		</p>
-		<p>Some expressions consist of multiple frames, such as a wink, while others consist of just one with a blinking animation in-between.
-			The Arduino continuously monitors for a bluetooth signal to change the expression, though while no signal is received, the current expression will run on a loop.
-		</p>
+			<p>Then upload the code to the board from Sketch ➔ Upload, or pressing Ctrl+U if using Windows or Cmd+U for Mac.</p>
+			<p class="code-image"><img src="Assets/Images/Board-Upload.png"></p>
+			<details>
+				<summary class="hint">Help there was a sketch upload issue!</summary>
+				<p>There are lots of potential reasons an upload can go wrong and unfortunately I cannot answer them all.
+					If it does not show a useful error message, I recommend turning on more advanced debugging using File ➔ Preferences and tick "Show verbose output during complication".</p>
+			</details>
+
+			<p>If it has worked correctly, the two LED matricies should light up and display X on each.</p>
+
+			<h3>Technical Explaination of Code</h3>
+			<p>The pre-set LED matrix eyes and alphabet are stored as binary arrays on the Arduino's memory.
+				Each array is linked to a key value that represents the expression it is linked to.
+				By default, the Arduino displays the X eyes when switched on as this has been set as "key1", though this can be changed at the top of the code.
+			</p>
+			<p>Some expressions consist of multiple frames, such as a wink, while others consist of just one with a blinking animation in-between.
+				The Arduino continuously monitors for a bluetooth signal to change the expression, though while no signal is received, the current expression will run on a loop.
+			</p>
+		</details>
+
+		<br>
 
 		<a name="step4" class="anchor"></a>
-		<h2>Step 4 - Android App</h2>
-		<p>
-			The Arduino can be paired to an Android device such as a phone or tablet through the bluetooth receiver.
-			This grants permission to send commands to the Ardiuno to change the values to display.
-			Before pairing, make sure the Arduino is switched and that the bluetooth module is wired correctly.
-		</p>
-		<p>
-			How to pair to the Arduino will depend on what device you have, but in general this should be under Settings ➔ Bluetooth.
-			If the name of the bluetooth module has not been changed, it will appear under its default name such as "HC-05".
-		</p>
-		<p>To download the application, visit this site on the device and click the phone icon below.
-			Note you may also have to go to Setting ➔ Security and check the option "Unknown sources" for this to work.
-		</p>
+		<details open="open">
+			<summary class="header2">Step 4 - Android App</summary>
+			<p>
+				The Arduino can be paired to an Android device such as a phone or tablet through the bluetooth receiver.
+				This grants permission to send commands to the Ardiuno to change the values to display.
+				Before pairing, make sure the Arduino is switched and that the bluetooth module is wired correctly.
+			</p>
+			<p>
+				How to pair to the Arduino will depend on what device you have, but in general this should be under Settings ➔ Bluetooth.
+				If the name of the bluetooth module has not been changed, it will appear under its default name such as "HC-05".
+			</p>
+			<p>To download the application, visit this site on the device and click the phone icon below.
+				Note you may also have to go to Setting ➔ Security and check the option "Unknown sources" for this to work.
+			</p>
 
-		<a href="https://github.com/TomMakesThings/Bluetooth-Wrench-Mask/raw/main/Android_App/bluetooth-controller-app.apk" target="_blank" rel="noopener noreferrer" download>
-			<img src="Assets/Images/Dedsec-Phone.png" class="code-download" style="height: 150px;">
-		</a>
+			<a href="https://github.com/TomMakesThings/Bluetooth-Wrench-Mask/raw/main/Android_App/bluetooth-controller-app.apk" target="_blank" rel="noopener noreferrer" download>
+				<img src="Assets/Images/Dedsec-Phone.png" class="code-download" style="height: 150px;">
+			</a>
 
-		<p>Once the app is installed, open it and you should see a list of all paired devices.
-			Press on the one corresponding to the name of the bluetooth module and wait for the devices to connect.
-			Now you should be able to change the LEDs to different expression by clicking buttons on the screen.
-		</p>
+			<p>Once the app is installed, open it and you should see a list of all paired devices.
+				Press on the one corresponding to the name of the bluetooth module and wait for the devices to connect.
+				Now you should be able to change the LEDs to different expression by clicking buttons on the screen.
+			</p>
 
-		<div class="video-container">
-			<video controls>
-				<source src="Assets/Videos/Phone-Demo.mov" type="video/mp4">
-				Error! Could not play video as it is not supported by your browser.
-			</video>
-		</div>
+			<div class="video-container">
+				<video controls>
+					<source src="Assets/Videos/Phone-Demo.mov" type="video/mp4">
+					Error! Could not play video as it is not supported by your browser.
+				</video>
+			</div>
+		</details>
+
+		<br>
 
 		<a name="step5" class="anchor"></a>
-		<h2>Step 5 - Attaching the Electronics</h2>
-
-		<p>Now that you have tested that the code and electronics are working, the mask can be assembled.</p>
-		<p>To protect the Arduino and keep the electronics away from your face, the Arduino is housed in a plastic case.
-			This can be attached in place below the LEDs using the liquid nails.
-		</p>
-		<p>Unfortunately this means that you will have to remove the wires and wire it again in the same way to fit it into the case.</p>
+		<details open="open">
+			<summary class="header2">Step 5 - Attaching the Electronics</summary>
+			<p>Now that you have tested that the code and electronics are working, the mask can be assembled.</p>
+			<p>To protect the Arduino and keep the electronics away from your face, the Arduino is housed in a plastic case.
+				This can be attached in place below the LEDs using the liquid nails.
+			</p>
+			<p>Unfortunately this means that you will have to remove the wires and wire it again in the same way to fit it into the case.</p>
+		</details>
 
 		<br>
 

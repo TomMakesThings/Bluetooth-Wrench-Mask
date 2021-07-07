@@ -2,6 +2,8 @@
   --black: #000000;
   --lightblack: #141414;
   --lightgreen: #a4d106;
+  --purple: #8632c7;
+  --lilac: #d8b5ff;
 }
 
 /** Custom fonts **/
@@ -49,9 +51,10 @@ h1 {
   text-align: center;
 }
 
-h2 {
+h2, .header2 {
   font-family: pixel;
   font-size: 20px;
+  font-weight: bolder;
 }
 
 h3 {
@@ -82,6 +85,29 @@ video {
 ul {
   /* Custom bullet points */
   list-style-image: url("../Assets/Images/Eyeball.png");
+}
+
+.hint {
+  color: var(--purple);
+}
+
+details>summary.header2 {
+
+  list-style: none;
+}
+summary::-webkit-details-marker.header2 {
+  display: none
+}
+
+summary.header2::after {
+  content: ' ►';
+}
+details[open] summary.header2:after {
+  content: " ▼";
+}
+
+summary:hover {
+  cursor: pointer;
 }
 
 .content {
