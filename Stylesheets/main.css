@@ -4,6 +4,7 @@
   --lightgreen: #a4d106;
   --purple: #8632c7;
   --lilac: #d8b5ff;
+  --arduinoblue: #19999F;
 }
 
 /** Custom fonts **/
@@ -91,10 +92,11 @@ ul {
   color: var(--purple);
 }
 
+/* Text drop down restyle */
 details>summary.header2 {
-
   list-style: none;
 }
+
 summary::-webkit-details-marker.header2 {
   display: none
 }
@@ -102,6 +104,7 @@ summary::-webkit-details-marker.header2 {
 summary.header2::after {
   content: ' ►';
 }
+
 details[open] summary.header2:after {
   content: " ▼";
 }
@@ -116,7 +119,6 @@ summary:hover {
   margin-top: 110px;
   overflow: visible;
 }
-
 
 /** Reposition anchor tags above linked content **/
 a.anchor {
@@ -138,6 +140,18 @@ a.anchor {
 ::-webkit-scrollbar-thumb {
   background-image: linear-gradient(to top, white, var(--lightgreen));
   border-radius: 10px;
+}
+
+/* WebKit and Blink browsers text selection */
+::selection {
+  background: var(--lightgreen);
+  color: black;
+}
+
+/* Gecko Browsers text selection */
+::-moz-selection {
+  background: var(--lightgreen);
+  color: black;
 }
 
 @media screen and (max-width: 720px) {

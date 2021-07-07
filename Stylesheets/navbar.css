@@ -83,7 +83,8 @@
   display: none;
   position: absolute;
   margin-top: 70px;
-  max-width: 120px;
+  width: -moz-fit-content;
+  width: fit-content;
   background-color: black;
   overflow-wrap: break-word;
 }

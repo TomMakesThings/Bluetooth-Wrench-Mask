@@ -1,3 +1,42 @@
+.software-logo {
+  float: left;
+  height: 50px;
+  padding-right: 15px;
+  margin-top: -10px;
+}
+
+.software-div:hover {
+  transform: scale(1.05);
+}
+
+.software-div {
+  width: -moz-fit-content;
+  width: fit-content;
+  transition: transform 0.5s;
+}
+
+.software-div p {
+  color: black;
+  font-family: pixel;
+  font-size: 10px;
+}
+
+.software-div:hover {
+  text-decoration: underline;
+}
+
+.software-text {
+  background-color: white;
+  border-radius: 10px 0px;
+  padding: 5px 15px 5px 15px;
+  text-decoration: none;
+  color: black;
+}
+
+.software-text:hover {
+  color: var(--arduinoblue);
+}
+
 div.column img {
   width: 100%;
   height: auto;
