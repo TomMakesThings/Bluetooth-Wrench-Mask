@@ -83,105 +83,240 @@
 	<div>
 		<a name="parts" class="anchor"></a>
 		<h1>Parts</h1>
-		<h2>Software:</h2>
-		<div class="software-div">
-			<p><img src="Assets/Images/Arduino-Logo.png" class="software-logo"><a href="https://www.arduino.cc/en/software" target="_blank" rel="noopener noreferrer" class="software-text">Arduino IDE</a></p>
-		</div>
+		<details open="open">
+			<summary class="header2">Software</summary>
+			<div class="software-div">
+				<p><a href="https://www.arduino.cc/en/software" target="_blank" rel="noopener noreferrer" class="software-text arduino"><img src="Assets/Images/Arduino-Logo.png" class="software-logo">Arduino IDE</a></p>
+				<div style="clear: both; line-height:3px;">
+		    	<br>
+				</div>
+				<p>✱ Required to upload code to the Arduino</p>
+				<p>✱ For the tutorial I used version 1.8.15</p>
+			</div>
 
-		<div style="clear: both; line-height:10px;">
-    	<br>
-		</div>
+			<div style="clear: both; line-height:10px;">
+	    	<br>
+			</div>
 
-		<div class="software-div">
-			<p><img src="Assets/Images/Android-Studio-Logo.png" class="software-logo"><a href="https://www.arduino.cc/en/software" target="_blank" rel="noopener noreferrer" class="software-text">Android Studio</a><a class="software-text">TBC</a></p>
-		</div>
+			<div class="software-div">
+				<p><a href="https://developer.android.com/studio" target="_blank" rel="noopener noreferrer" class="software-text android"><img src="Assets/Images/Android-Studio-Logo.png" class="software-logo">Android Studio</a></p>
+				<div style="clear: both; line-height:3px;">
+		    	<br>
+				</div>
+				<p>✱ Only needed if you wish to edit the Android app</p>
+				<p>✱ The app was developed in Android Studio 3.5.1</p>
+			</div>
+		</details>
 
-		<h2>Hardware:</h2>
+		<br>
+
+		<details open="open">
+			<summary class="header2">Code</summary>
+			<div class="software-div">
+				<p><a href="https://github.com/TomMakesThings/Bluetooth-Wrench-Mask/archive/refs/heads/main.zip" target="_blank" rel="noopener noreferrer" class="software-text arduino2"><img src="Assets/Images/Arduino-Uno-Art.png" class="software-logo">Arduino code</a></p>
+				<div style="clear: both; line-height:3px;">
+					<br>
+				</div>
+				<p>✱ TBC</p>
+			</div>
+
+			<div style="clear: both; line-height:10px;">
+				<br>
+			</div>
+
+			<div class="software-div">
+				<p><a href="https://github.com/TomMakesThings/Bluetooth-Wrench-Mask/raw/main/Android_App/bluetooth-controller-app.apk" target="_blank" rel="noopener noreferrer" class="software-text android2"><img src="Assets/Images/Android-Art.png" class="software-logo">Android phone app</a></p>
+				<div style="clear: both; line-height:3px;">
+					<br>
+				</div>
+				<p>✱ TBC</p>
+			</div>
+		</details>
+
+		<br>
+
+		<h2>Supplies:</h2>
 
 		<div class="row">
 			<div class="column">
 				<div>
 					<a><img src="Assets/Images/Plastic-Mask.jpg" class="part"></a>
-					<div class="part-desc">Plastic Wrench mask</div>
+					<div class="part-desc">
+						<p class="part-name">Plastic Wrench mask</p>
+						<ul class="part-list">
+							<li>If you're in the UK, try searching "watch dogs mask" on Amazon</li>
+						</ul>
+					</div>
 				</div>
 				<div>
 					<a><img src="Assets/Images/Black-Spray-Paint.jpg" class="part"></a>
-					<div class="part-desc">Black spray paint</div>
+					<div class="part-desc">
+						<p class="part-name">Black spray paint</p>
+						<ul class="part-list">
+							<li>I used PlastiKote super gloss black spray paint</li>
+							<li>You can use other paints but make sure you get one suitable for plastic</li>
+						</ul>
+					</div>
 				</div>
 				<div>
 					<a><img src="Assets/Images/Silver-Paint.png" class="part"></a>
-					<div class="part-desc">Metallic silver paint</div>
+					<div class="part-desc">
+						<p class="part-name">Metallic silver paint</p>
+						<ul class="part-list">
+							<li>I used Rust-Oleum metallic silver furniture paint as I had some spare</li>
+							<li>Normal acryclic paint works too</li>
+						</ul>
+					</div>
 				</div>
 				<div>
 					<a><img src="Assets/Images/Paintbrush.jpg" class="part"></a>
-					<div class="part-desc">Fine paintbrushes</div>
+					<div class="part-desc">
+						<p class="part-name">Fine paintbrushes</p>
+						<ul class="part-list">
+							<li>The things normal people use for painting</li>
+						</ul>
+					</div>
 				</div>
 			</div>
 			<div class="column">
 				<div>
 					<a><img src="Assets/Images/Android-Phone.jpg" class="part"></a>
-					<div class="part-desc">Android phone or tablet</div>
+					<div class="part-desc">
+						<p class="part-name">Android device</p>
+						<ul class="part-list">
+							<li>Can be either a phone or tablet</li>
+							<li>Unfortunately the app is not compatible with iOS devices (blame Apple)</li>
+						</ul>
+					</div>
 				</div>
 				<div>
 					<a><img src="Assets/Images/Arduino-Uno.jpg" class="part"></a>
-					<div class="part-desc">Arduino UNO, can genuiune or an unofficial clone board</div>
+					<div class="part-desc">
+						<p class="part-name">Arduino UNO</p>
+						<ul class="part-list">
+							<li>Doesn't matter if it's genuiune or an unofficial clone board</li>
+						</ul>
+					</div>
 				</div>
 				<div>
 					<a><img src="Assets/Images/USB-Cable.jpg" class="part"></a>
-					<div class="part-desc">USB A to USB B cable</div>
+					<div class="part-desc">
+						<p class="part-name">USB A to USB B cable</p>
+						<ul class="part-list">
+							<li>These cables are generic</li>
+							<li>Often they'll send you one with the board</li>
+						</ul>
+					</div>
 				</div>
 				<div>
 					<a><img src="Assets/Images/LED-Matrix.jpg" class="part"></a>
-					<div class="part-desc">x2 white 8x8 LED matrix with module</div>
+					<div class="part-desc">
+						<p class="part-name">x2 white 8x8 LED matrix with MAX7219 module</p>
+						<ul class="part-list">
+							<li>Note that the LED matrix is detachable from the module and is easy to swap</li>
+							<li>For me it was cheaper to buy modules with red LEDs and buy two white LED matrices separately</li>
+						</ul>
+					</div>
 				</div>
 			</div>
 			<div class="column">
 				<div>
 					<a><img src="Assets/Images/Bluetooth-Module.jpg" class="part"></a>
-					<div class="part-desc">HC-06 wireless bluetooth module, HC-05 works too</div>
+					<div class="part-desc">
+						<p class="part-name">HC-06 wireless bluetooth module</p>
+						<ul class="part-list">
+							<li>HC-05 modules work too as they're basically the same but with more functionality</li>
+						</ul>
+					</div>
 				</div>
 				<div>
 					<a><img src="Assets/Images/Jumper-Wires.jpg" class="part"></a>
-					<div class="part-desc">x14 male to female jumper wire, ideally 5 should be black</div>
+					<div class="part-desc">
+						<p class="part-name">x14 male to female jumper wire</p>
+						<ul class="part-list">
+							<li>Ideally you want at least 5 to be black as the ones between the eyes are slightly visible</li>
+						</ul>
+					</div>
 				</div>
 				<div>
 					<a><img src="Assets/Images/9V-Battery-Holder.png" class="part"></a>
-					<div class="part-desc">9V battery holder with connector lead and on/off switch</div>
+					<div class="part-desc">
+						<p class="part-name">9V battery holder with an on/off switch</p>
+						<ul class="part-list">
+							<li>Get one with a connector lead that can fit into the Arduino's barrel jack</li>
+							<li>It must have an on/off switch to control power to the Arduino</li>
+						</ul>
+					</div>
 				</div>
 				<div>
 					<a><img src="Assets/Images/9V-Battery.jpg" class="part"></a>
-					<div class="part-desc">9V battery</div>
+					<div class="part-desc">
+						<p class="part-name">9V battery</p>
+						<ul class="part-list">
+							<li>The battery will last a long time, but I recommend buying some spares just in case</li>
+							<li>I tested AA batteries too, but 8 are required to provide a high enough voltage to power the LEDs which takes up a lot more space</li>
+						</ul>
+					</div>
 				</div>
 				<div>
 					<a><img src="Assets/Images/Arduino-Case.jpg" class="part"></a>
-					<div class="part-desc">Arduino UNO plastic case</div>
+					<div class="part-desc">
+						<p class="part-name">Arduino UNO plastic case</p>
+						<ul class="part-list">
+							<li>The colour doesn't matter since it'll be inside the mask</li>
+						</ul>
+					</div>
 				</div>
 			</div>
 			<div class="column">
 				<div>
 					<a><img src="Assets/Images/Black-Elastic.png" class="part"></a>
-					<div class="part-desc">Black elastic strap</div>
+					<div class="part-desc">
+						<p class="part-name">Black elastic strap</p>
+						<ul class="part-list">
+							<li>Make sure its long enough to fit round the back of your head</li>
+						</ul>
+					</div>
 				</div>
 				<div>
 					<a><img src="Assets/Images/Velcro.jpg" class="part"></a>
-					<div class="part-desc">Velcro strip</div>
+					<div class="part-desc">
+						<p class="part-name">Velcro strip</p>
+						<ul class="part-list">
+							<li>This needs to be about the size of the battery pack</li>
+						</ul>
+					</div>
 				</div>
 				<div>
 					<a><img src="Assets/Images/Black-Tape.jpg" class="part"></a>
-					<div class="part-desc">Black electric tape</div>
+					<div class="part-desc">
+						<p class="part-name">Black electric tape</p>
+						<ul class="part-list">
+							<li>Use a tape designed insulate electrical wires</li>
+						</ul>
+					</div>
 				</div>
 				<div>
 					<a><img src="Assets/Images/Liquid-Nails.jpg" class="part"></a>
-					<div class="part-desc">Liquid nails</div>
+					<div class="part-desc">
+						<p class="part-name">Liquid nails</p>
+						<ul class="part-list">
+							<li>This stuff is pretty strong and will keep the parts in place inside the mask</li>
+							<li>Can be purchased in black</li>
+						</ul>
+					</div>
 				</div>
 				<div>
 					<a><img src="Assets/Images/Black-Paint.png" class="part"></a>
-					<div class="part-desc">Black paint</div>
+					<div class="part-desc">
+						<p class="part-name">Black paint</p>
+						<ul class="part-list">
+							<li>I used this to paint the white liquid nails</li>
+						</ul>
+					</div>
 				</div>
 			</div>
 		</div>
-
-		<h2>Other supplies:</h2>
 
 	</div>
 
@@ -225,7 +360,6 @@
 			<summary class="header2">Step 3 - Uploading Arduino Code</summary>
 			<p>Code can be uploaded to the board using Arduino IDE.
 				If you do not have this already, <a href="https://www.arduino.cc/en/software" target="_blank" rel="noopener noreferrer">download the latest version</a> from the official Arduino site.
-				For this tutorial I'm using version 1.8.15.
 				To download all required code in zip format, click the file below.
 				You can also find these files on <a href="https://github.com/TomMakesThings/Bluetooth-Wrench-Mask" target="_blank" rel="noopener noreferrer">GitHub</a>.
 			</p>

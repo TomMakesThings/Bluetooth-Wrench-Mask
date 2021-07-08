@@ -1,40 +1,65 @@
 .software-logo {
   float: left;
-  height: 50px;
+  height: 60px;
   padding-right: 15px;
   margin-top: -10px;
+  margin-bottom: -10px;
 }
 
 .software-div:hover {
-  transform: scale(1.05);
+  transform: scale(1.03);
 }
 
 .software-div {
   width: -moz-fit-content;
   width: fit-content;
   transition: transform 0.5s;
+  display: inline-block;
 }
 
-.software-div p {
-  color: black;
+.software-div p, .software-div li  {
+  font-family: highpixel;
+  font-size: 18px;
+}
+
+.software-div a {
   font-family: pixel;
-  font-size: 10px;
+  font-size: 13px;
+  font-weight: bolder;
 }
 
-.software-div:hover {
+.software-text:hover {
   text-decoration: underline;
 }
 
 .software-text {
+  color: black;
   background-color: white;
   border-radius: 10px 0px;
   padding: 5px 15px 5px 15px;
+  margin-right: 18px;
   text-decoration: none;
   color: black;
 }
 
-.software-text:hover {
-  color: var(--arduinoblue);
+.arduino:hover, .arduino2:hover, .android:hover, .android2:hover {
+  color: white;
+}
+
+.arduino:hover {
+  background-color: var(--arduinoblue);
+}
+
+.arduino2:hover {
+  background-color: var(--arduinoblue2);
+}
+
+.android:hover {
+  background-color: var(--androidgreen);
+}
+
+.android2:hover {
+  background-color: var(--androidgreen2);
 }
 
 div.column img {
@@ -53,6 +78,15 @@ div.part-desc {
   background-color: white;
   color: black;
   border-radius: 20px 0px;
+}
+
+.part-name {
+  font-weight: bolder;
+}
+
+.part-list {
+  text-align: left;
+  margin-left: 10px;
 }
 
 .row {
