@@ -4,7 +4,6 @@
             <p><b>By <a href="https://github.com/TomMakesThings">T̷̛̻̱͝ó̷̤͓m̴̨̄M̵̛͕̭̀à̴͍̪k̶͖̓ē̴̡̇s̴̻̒T̶͍͠h̷̹̱̏ḯ̸̫̒n̵̰̐̍ǵ̷̛̩͇s̵̭̺͑̋</a></b></p>
 </div>
 
-<p>View the full tutorial <a href="https://tommakesthings.github.io/Bluetooth-Wrench-Mask/">here</a></p>
-           
-# Arduino 💻
-# App 📱
+---
+
+<h2><a href="https://tommakesthings.github.io/Bluetooth-Wrench-Mask/">Click here</a> to view the tutorial. Note it is currently a work in progress.</h2>
