@@ -5,10 +5,6 @@
 	border-radius: 50%;
 }
 
-#username {
-  font-size: 25px;
-}
-
 .header {
   font-family: hacked;
   overflow: visible;
@@ -35,7 +31,8 @@
 }
 
 #header-left a {
-  font-size: 22px;
+  font-size: 25px;
+  margin-top: 2px;
 }
 
 #header-center a {
@@ -67,7 +64,7 @@
 
 #header-left {
   float: left;
-  font-family: pineapple;
+  font-family: retro_computer_2;
 }
 
 .header-right {

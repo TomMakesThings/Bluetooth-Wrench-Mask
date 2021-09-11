@@ -15,6 +15,14 @@
   width: fit-content;
   transition: transform 0.5s;
   display: inline-block;
+  float: left;
+  width: 50%;
+}
+
+.software-div ul {
+  list-style-image: none;
+  padding-right: 30px;
+  margin-left: -10px;
 }
 
 .software-div p, .software-div li  {
@@ -117,6 +125,15 @@ div.part-desc {
     -ms-flex: 50%;
     flex: 50%;
     max-width: 50%;
+  }
+
+  .software-div {
+    float: none;
+    width: 100%;
+  }
+
+  .software-div ul {
+    padding-right: 0px;
   }
 }
 
