@@ -6,4 +6,4 @@
 
 ---
 
-<h3><a href="https://tommakesthings.github.io/Bluetooth-Wrench-Mask/">Click here</a> to view the tutorial. Note documentation is currently a work in progress, though the full code can be downloaded <a href="https://github.com/TomMakesThings/Bluetooth-Wrench-Mask/archive/refs/heads/main.zip">here</a>.</h3>
+<h3><a href="https://tommakesthings.github.io/Bluetooth-Wrench-Mask/">Click here</a> to view the tutorial. Note documentation is a work in progress as I have been busy, though the full code can be downloaded <a href="https://github.com/TomMakesThings/Bluetooth-Wrench-Mask/archive/refs/heads/main.zip">here</a>.</h3>
